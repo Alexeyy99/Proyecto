@@ -10,8 +10,8 @@
             </div>
 
             <div class="card-footer">
-                <button class="float-right btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</button>
-                <a href="{{route('users.index')}}" class="btn btn-secondary btn-sm">Regresar</a>
+                <button class="float-right btn btn-primary"><i class="fa fa-edit"></i> Editar</button>
+                <a href="{{ route('users.index') }}" class="btn btn-secondary"><i class="fa fa-home"></i> Regresar</a>
             </div>
         </div>
     </form>

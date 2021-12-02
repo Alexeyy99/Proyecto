@@ -32,7 +32,7 @@ class CarrosEdit extends Component
             }
             $this->carro->foto = Storage::disk('public')->put('images/carros', $this->foto);
         }
-        $this->usuario->save();
+        $this->carro->save();
         return redirect(route('carros.index'));
     }
 
