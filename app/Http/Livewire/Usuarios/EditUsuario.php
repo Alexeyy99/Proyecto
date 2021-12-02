@@ -13,21 +13,16 @@ class EditUsuario extends Component
     public Usuario $usuario;
     public $foto;
 
-    public function mount($usuario)
-    {
-        $this->usuario = $usuario;
-    }
-
     public function render()
     {
         return view('livewire.usuarios.edit-usuario');
     }
 
-    public function editar()
+    public function editarUser()
     {
         $this->validate();
-        if ($this->foto != null) {
-            if ($this->usuario->foto != null) {
+        if($this->foto != null) {
+            if($this->usuario->foto != null){
                 Storage::disk('public')->delete($this->usuario->foto);
             }
             $this->usuario->foto = Storage::disk('public')->put('images/usuarios', $this->foto);

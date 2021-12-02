@@ -9,7 +9,7 @@ class ReglasUsuarios {
             'usuario.nombre' => 'string|required',
             'usuario.email' => 'string|required',
             'usuario.password' => 'string|required',
-            'usuario.foto' => 'nullable|image'
+            'usuario.foto' => 'nullable'
         ];
     }
 }

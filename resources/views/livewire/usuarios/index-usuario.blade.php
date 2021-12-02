@@ -6,7 +6,7 @@
 
     </div>
 
-    <div class="col-3 mb-2">
+    <div class="col-4 mb-2">
         <div class="input-group flex-nowrap">
             <span class="input-group-text"><i class="fa fa-search"></i></span>
             <input wire:model="search" type="text" class="form-control" placeholder="Buscar">

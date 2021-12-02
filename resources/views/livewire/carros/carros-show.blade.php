@@ -1,6 +1,6 @@
 <div>
-    <div class="mx-auto card" style="width: 23rem;">
-        <img 
+    <div class="mx-auto card" style="width: 19rem;">
+        <img style="width: 302px; height: 190px;"
             src="{{ Storage::disk('public')->url($carro->foto != null ? $carro->foto : 'images/carros/default.jpg') }}"
             class="mx-auto mb-3 card" alt="...">
         <div class="card-body">

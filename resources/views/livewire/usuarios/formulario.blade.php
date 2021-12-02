@@ -29,19 +29,19 @@
     <div class="col-6 mx-auto">
         <div class="form-group mb-5">
             <label>Nombre</label>
-            <input wire:model.defer="usuario.nombre" type="text" class="form-control" id="model">
+            <input wire:model.defer="usuario.nombre" type="text" class="form-control">
             @error('usuario.nombre') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group mb-5">
             <label>Email</label>
-            <input wire:model.defer="usuario.email" type="text" class="form-control" id="year">
+            <input wire:model.defer="usuario.email" type="text" class="form-control">
             @error('usuario.email') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group mb-5">
             <label>Password</label>
-            <input wire:model="usuario.password" type="password" class="form-control" id="price">
+            <input wire:model="usuario.password" type="password" class="form-control">
             @error('usuario.password') <span class="text-danger">{{ $message }}</span> @enderror
             <span></span>
         </div>
