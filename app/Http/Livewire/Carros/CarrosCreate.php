@@ -30,7 +30,9 @@ class CarrosCreate extends Component
             $this->carro->foto = Storage::disk('public')->put('/images/carros', $this->foto);
         }
         $this->carro->save();
+        $this->emit('alert-carro-create', 'Se ha registrado este modelo correctamente');
         return redirect(route('carros.index'));
+
     }
 
     protected function rules()

@@ -2,7 +2,7 @@
 
     <div class="float-right mb-2">
         <a href="{{ route('users.create') }}" type="button" class="btn-sm btn btn-success"><i
-                class="fa fa-plus-circle"></i> Crear nuevo</a>
+                class="fa fa-user-plus"></i> Crear nuevo</a>
 
     </div>
 
@@ -21,7 +21,6 @@
                     <th>Imagen</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Password</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -30,13 +29,12 @@
                     <tr>
                         <th scope="row">{{ $usuario->id }}</th>
                         <th>
-                            <img style="width: 70px; height: 60px;"
+                            <img style="border-radius: 100px; width: 60px; height: 60px;"
                                 src="{{ Storage::disk('public')->url($usuario->foto != null ? $usuario->foto : 'images/usuarios/noimage.png') }}"
-                                alt="">
+                                >
                         </th>
                         <td>{{ $usuario->nombre }}</td>
                         <td>{{ $usuario->email }}</td>
-                        <td>{{ $usuario->password }}</td>
                         <td>
                             <a type="button" href="{{ route('users.show', $usuario) }}" class="btn btn-info btn-sm"><i
                                     class="fa fa-eye"></i></a>

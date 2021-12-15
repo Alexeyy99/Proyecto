@@ -16,7 +16,8 @@ class CarrosDelete extends Component
         return view('livewire.carros.carros-delete');
     }
 
-    public function delete(){
+    public function delete()
+    {
         $this->carro->delete();
         return redirect(route('carros.index'));
     }

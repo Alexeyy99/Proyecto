@@ -8,11 +8,11 @@
         </div>
 
         @if ($foto != null)
-            <img class="mx-auto d-block " style="width: 290px; height: 250px;" src="{{ $foto->temporaryUrl() }}" alt="">
+            <img class="border-radius: 25px; mx-auto d-block " style="border-radius: 25px; width: 290px; height: 250px;" src="{{ $foto->temporaryUrl() }}" alt="">
 
         @else
-            <img class="mx-auto d-block " style="width: 290px; height: 250px;"
-             src="{{ Storage::disk('public')->url($usuario->foto != null ? $usuario->foto : 'images/usuarios/noimage.jpg') }} "alt="">
+            <img class="border-radius: 120px; mx-auto d-block " style="border-radius: 25px; width: 290px; height: 250px;"
+             src="{{ Storage::disk('public')->url($usuario->foto != null ? $usuario->foto : 'images/usuarios/noimage.png') }} "alt="">
 
         @endif
 
@@ -35,15 +35,21 @@
 
         <div class="form-group mb-5">
             <label>Email</label>
-            <input wire:model.defer="usuario.email" type="text" class="form-control">
+            <input wire:model.defer="usuario.email" type="email" class="form-control">
             @error('usuario.email') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group mb-5">
             <label>Password</label>
-            <input wire:model="usuario.password" type="password" class="form-control">
-            @error('usuario.password') <span class="text-danger">{{ $message }}</span> @enderror
+            <input wire:model="password" type="password" class="form-control">
+            @error('password') <span class="text-danger">{{ $message }}</span> @enderror
             <span></span>
+        </div>
+
+        <div class="form-group mb-5">
+            <label>Verificar Password</label>
+            <input wire:model="confirmar_password" type="password" class="form-control">
+            @error('confirmar_password') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
     </div>
